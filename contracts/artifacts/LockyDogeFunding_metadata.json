@@ -336,7 +336,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SmartContractLockeyDoge.sol": "LockyDogeFunding"
+			"contracts/SmartContractLockeyDoge-Funding.sol": "LockyDogeFunding"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -350,12 +350,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/SmartContractLockeyDoge.sol": {
-			"keccak256": "0xbd50347096864affeec7003cb033beb8bdcee65e2634881ed5e3228842fff726",
+		"contracts/SmartContractLockeyDoge-Funding.sol": {
+			"keccak256": "0x5cc4524a05beec05b1b99422ca930dfa079053e80360b9d043323e789fd239e8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7d425e015d5d629af0f2bc6985549a2fc0445d5e791cbe48309b761e0eaec098",
-				"dweb:/ipfs/QmU9Crdem3KAne1TDCXxQUJvpUkFtJNBXcDBT4n8xkdGWF"
+				"bzz-raw://9acf4e265a6f01cc495abc06ed74924d65087fffebf15f41d3117668c9a14f27",
+				"dweb:/ipfs/Qmb89GePnY1j8UB32kN2MFdsWAy3VixpGqqQkAt8k9a8Zp"
 			]
 		}
 	},

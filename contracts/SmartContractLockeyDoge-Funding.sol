@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 contract LockyDogeFunding {
     
     // Enum for project state
-    enum ProjectState { Created, OpenForFunding, FundingClosed, InProgress }
+    enum ProjectState { Created, OpenForFunding, FundingClosed, FundWithdrawn }
     
     // Struct for a project proposal
     struct Project {
@@ -29,13 +29,13 @@ contract LockyDogeFunding {
     event FundsWithdrawn(uint projectId, uint amount);
     event ProjectStarted(uint projectId);
     
-    // Modifier to check if the sender is the admin
+    // Admin Only Modifier
     modifier onlyAdmin() {
         require(msg.sender == admin, "Only admin can perform this action");
         _;
     }
     
-    // Modifier to check project ownership
+    // Owner Only Modifier
     modifier onlyOwner(uint projectId) {
         require(msg.sender == projects[projectId].owner, "Only the project owner can perform this action");
         _;
@@ -95,7 +95,7 @@ contract LockyDogeFunding {
         
         uint amount = project.amountRaised;
         project.amountRaised = 0;
-        project.state = ProjectState.InProgress;
+        project.state = ProjectState.FundWithdrawn;
         
         project.owner.transfer(amount);
         emit FundsWithdrawn(projectId, amount);
